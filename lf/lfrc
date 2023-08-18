@@ -1,0 +1,51 @@
+# Basic Settings
+set hidden true
+set ignorecase true
+set icons true
+
+
+cmd open_in_vscode $code .
+
+
+# Bindings
+map d
+map m
+
+
+# Basic Functions
+map dd delete
+map dD push :remove
+map p paste
+map x cut
+map y copy
+map R reload
+map C clear
+
+# open in vscode
+map <enter> open_in_vscode
+# open in explorer
+map S push &start.<enter>
+# copy file path
+map Y %echo %fx% | clip 
+# reload config file using f4
+map <f-4> push :source<space>~/AppData/Local/lf/lfrc<enter>
+
+
+# TODO:
+# rename
+# make new file or folder
+# preview file
+# unzip
+# zip
+# move to folder
+# copy to folder
+# open folder in new powershell or existing powershell
+
+
+# Movement
+map gd cd ~/desktop
+map gD cd ~/downloads
+map gp cd ~/pictures
+map gc cd ~/.config
+map gr cd ~/desktop/Projects
+map glf cd ~/AppData/Local/lf
