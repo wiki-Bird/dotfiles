@@ -1,0 +1,1 @@
+python C:\Users\ella\.yasb\yasb\src\main.py

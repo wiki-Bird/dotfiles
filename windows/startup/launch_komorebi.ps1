@@ -1,0 +1,1 @@
+komorebic start -c $Env:KOMOREBI_CONFIG_HOME\komorebi.json --whkd
