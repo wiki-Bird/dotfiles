@@ -99,7 +99,7 @@ bars:
     widgets:
       left:   ["komorebi_workspaces", "active_window"]
       center: []
-      right:  ["cpu", "memory", "weather", "clock"] # , "weather"
+      right:  ["cpu", "memory", "wifi", "weather", "clock"] # , "weather"
 
 # widgets:
   # my-clock-widget:
@@ -445,6 +445,23 @@ widgets:
         on_left: 'next_layout'
         on_middle: 'toggle_monocle'
         on_right: 'prev_layout'
+
+  wifi:
+    type: "yasb.wifi.WifiWidget"
+    options:
+        label: "{wifi_icon}"
+        label_alt: "{wifi_icon} {wifi_name}"
+        update_interval: 5000
+        wifi_icons:
+          - "\udb82\udd2e"  # Icon for 0% strength
+          - "\udb82\udd1f"  # Icon for 1-25% strength
+          - "\udb82\udd22"  # Icon for 26-50% strength
+          - "\udb82\udd25"  # Icon for 51-75% strength
+          - "\uf1eb"  # Icon for 76-100% strength
+        callbacks:
+          on_middle: "do_nothing"
+          on_right: "exec cmd.exe /c start ms-settings:network"
+
 
   # Some custom widgets
 

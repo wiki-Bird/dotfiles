@@ -95,6 +95,7 @@
 .cpu-widget .label,
 .memory-widget .label,
 .weather-widget .label,
+.wifi-widget .label,
 .clock-widget .label,
 .battery-widget .label {
   padding: 2px 8px;
