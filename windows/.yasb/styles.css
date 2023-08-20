@@ -5,7 +5,7 @@
     font-family: FiraCode Nerd Font, 'Font Awesome 5 Free', 'Courier New', 'Bars';
     /* font-size: 14px; */
     font-size: 8px;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.7);
     /* color: #f2e5bc; */
 }
 
@@ -62,19 +62,21 @@
 }
 
 .ws-btn.active {
+    border-color: rgba(255, 255, 255, 1);
     background: rgba(255, 255, 255, 1);
 }
 
 .custom-widget {
     padding: 2px 6px;
     font-size: 14px;
-    background: #bdae93;
+    /* background: #bdae93; */
 }
 .custom-widget .icon {
   font-size: 8px;
 }
 .custom-widget:hover {
-  background: #fbf1c7;
+  /* background: #fbf1c7; */
+  color: rgba(255, 255, 255, 0.9);
 }
 .custom-widget .icon.icon-left {
     margin-right: 5px;
@@ -100,11 +102,13 @@
 }
 
 .weather-widget {
-  background: #7B6FA3;
+  /* background: #7B6FA3; */
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .clock-widget .label {
   /* background: #422c8b; */
+  color: #fff;
   border-radius: 0 0 10px 10px; /* top-left top-right bottom-right bottom-left */
   /* margin-right: 10px; */
 }
@@ -161,5 +165,5 @@
 .komorebi-active-layout .label {
   color: #fbf1c7;
   margin: -4px 2px 2px 8px;
-  font-family: Hack;
+  /* font-family: Hack; */
 }

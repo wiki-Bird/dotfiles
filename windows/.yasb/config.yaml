@@ -99,7 +99,7 @@ bars:
     widgets:
       left:   ["komorebi_workspaces", "active_window"]
       center: []
-      right:  ["cpu", "memory", "clock"] # , "weather"
+      right:  ["cpu", "memory", "weather", "clock"] # , "weather"
 
 # widgets:
   # my-clock-widget:
@@ -478,12 +478,12 @@ widgets:
   weather:
     type: "yasb.custom.CustomWidget"
     options:
-      label: "\uf0c2 {data[main][temp]}\u00b0c"
-      label_alt: "\uf0c2 {data[weather][0][description]}"
+      label: "\uf0c2 {data[weather][0][hourly][0][FeelsLikeC]}\u00b0C, {data[weather][0][hourly][0][weatherDesc][0][value]}"
+      # label_alt: "\uf0c2 Sunrise: {data[weather][0][astronomy][0][sunrise]} | Sunset: {data[weather][0][astronomy][0][sunset]}"
+      label_alt: "\ue318 Rain: {data[weather][0][hourly][0][chanceofrain]}% | \ue373 Humidity: {data[weather][0][hourly][0][humidity]}%"
       class_name: "weather-widget"
       exec_options:
-        run_cmd: "curl.exe api.openweathermap.org/data/3.0/onecall?lat=-36.848461&lon=174.763336&appid=54c88389c4d821385ebb3be0c2b3ef3d"
-        # run_cmd: "curl.exe api.openweathermap.org/data/2.5/weather?q=Auckland&units=metric&appid=54c88389c4d821385ebb3be0c2b3ef3d"
-        # run every hour
-        run_interval: 3600000
+        # run_cmd: "curl.exe api.openweathermap.org/data/2.5/weather?q=Auckland,nz&units=metric&APPID=54c88389c4d821385ebb3be0c2b3ef3d"
+        run_cmd: "curl.exe wttr.in/auckland?format=j1"
+        run_interval: 3600000 # run every hour
         return_format: "json"
