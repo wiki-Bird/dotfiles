@@ -2,3 +2,7 @@ lf/history
 lf/files
 .yasb/yasb.log
 .yasb/yasb/*
+nvim/.github/*
+nvim/LICENSE
+nvim/.git/*
+nvim/.ignore

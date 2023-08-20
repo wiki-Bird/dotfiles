@@ -485,5 +485,5 @@ widgets:
       exec_options:
         # run_cmd: "curl.exe api.openweathermap.org/data/2.5/weather?q=Auckland,nz&units=metric&APPID=54c88389c4d821385ebb3be0c2b3ef3d"
         run_cmd: "curl.exe wttr.in/auckland?format=j1"
-        run_interval: 3600000 # run every hour
+        run_interval: 1800000 # run every hour
         return_format: "json"
