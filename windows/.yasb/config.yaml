@@ -97,9 +97,9 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left:   ["komorebi_workspaces", "active_window"]
+      left:   ["komorebi_workspaces", "active_window", "memory", "cpu"]
       center: []
-      right:  ["cpu", "memory", "wifi", "weather", "clock"] # , "weather"
+      right:  ["wifi", "weather", "clock"] # , "weather"
 
 # widgets:
   # my-clock-widget:
@@ -451,7 +451,7 @@ widgets:
     options:
         label: "{wifi_icon}"
         label_alt: "{wifi_icon} {wifi_name}"
-        update_interval: 5000
+        update_interval: 60000 
         wifi_icons:
           - "\udb82\udd2e"  # Icon for 0% strength
           - "\udb82\udd1f"  # Icon for 1-25% strength
@@ -495,12 +495,11 @@ widgets:
   weather:
     type: "yasb.custom.CustomWidget"
     options:
-      label: "\uf0c2 {data[weather][0][hourly][0][FeelsLikeC]}\u00b0C, {data[weather][0][hourly][0][weatherDesc][0][value]}"
-      # label_alt: "\uf0c2 Sunrise: {data[weather][0][astronomy][0][sunrise]} | Sunset: {data[weather][0][astronomy][0][sunset]}"
-      label_alt: "\ue318 Rain: {data[weather][0][hourly][0][chanceofrain]}% | \ue373 Humidity: {data[weather][0][hourly][0][humidity]}%"
+      label: "\uf0c2 {data[current_condition][0][temp_C]}\u00b0C, {data[current_condition][0][weatherDesc][0][value]}"
+      label_alt: "\udb86\udcd6 Feels Like: {data[current_condition][0][FeelsLikeC]}\u00b0C | \udb81\udd8c Humidity: {data[current_condition][0][humidity]}\u00b0C"
       class_name: "weather-widget"
       exec_options:
         # run_cmd: "curl.exe api.openweathermap.org/data/2.5/weather?q=Auckland,nz&units=metric&APPID=54c88389c4d821385ebb3be0c2b3ef3d"
         run_cmd: "curl.exe wttr.in/auckland?format=j1"
-        run_interval: 1800000 # run every hour
+        run_interval: 1800000 # run 30 mins
         return_format: "json"

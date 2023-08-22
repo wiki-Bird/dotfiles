@@ -8,7 +8,7 @@
 - [winfetch](https://github.com/lptstr/winfetch/) - system info
 - startup - my startup scripts
 
-![desktop](images/desktop3.png)
+![desktop](images/desktop4.png)
 
 ### Mac:
 - todo
