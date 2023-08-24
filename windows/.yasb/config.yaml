@@ -496,7 +496,7 @@ widgets:
     type: "yasb.custom.CustomWidget"
     options:
       label: "\uf0c2 {data[current_condition][0][temp_C]}\u00b0C, {data[current_condition][0][weatherDesc][0][value]}"
-      label_alt: "\udb86\udcd6 Feels Like: {data[current_condition][0][FeelsLikeC]}\u00b0C | \udb81\udd8c Humidity: {data[current_condition][0][humidity]}\u00b0C"
+      label_alt: "\udb86\udcd6 Feels Like: {data[current_condition][0][FeelsLikeC]}\u00b0C | \udb81\udd8c Humidity: {data[current_condition][0][humidity]}%"
       class_name: "weather-widget"
       exec_options:
         # run_cmd: "curl.exe api.openweathermap.org/data/2.5/weather?q=Auckland,nz&units=metric&APPID=54c88389c4d821385ebb3be0c2b3ef3d"

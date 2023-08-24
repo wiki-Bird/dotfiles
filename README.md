@@ -7,6 +7,7 @@
 - [whkdrc](https://github.com/LGUG2Z/whkd) - hotkey daemon
 - [winfetch](https://github.com/lptstr/winfetch/) - system info
 - startup - my startup scripts
+- [nvim](https://github.com/neovim/neovim) using [NvChad](https://github.com/NvChad/NvChad) - editor
 
 ![desktop](images/desktop4.png)
 
