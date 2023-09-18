@@ -79,9 +79,6 @@ bars:
       position: "top"
       center: false
     blur_effect:
-      # enabled: true
-      # acrylic: true
-      # dark: true
       enabled: false
       acrylic: true
       dark: false
@@ -99,7 +96,7 @@ bars:
     widgets:
       left:   ["komorebi_workspaces", "active_window", "memory", "cpu"]
       center: []
-      right:  ["wifi", "weather", "clock"] # , "weather"
+      right:  ["wifi", "weather", "clock"]
 
 # widgets:
   # my-clock-widget:
@@ -499,7 +496,7 @@ widgets:
       label_alt: "\udb86\udcd6 Feels Like: {data[current_condition][0][FeelsLikeC]}\u00b0C | \udb81\udd8c Humidity: {data[current_condition][0][humidity]}%"
       class_name: "weather-widget"
       exec_options:
-        # run_cmd: "curl.exe api.openweathermap.org/data/2.5/weather?q=Auckland,nz&units=metric&APPID=54c88389c4d821385ebb3be0c2b3ef3d"
+        # run_cmd: "curl.exe api.openweathermap.org/data/2.5/weather?q=Auckland,nz&units=metric&APPID=54c88389c4d821385ebb3be0c2b3ef3d" #old API
         run_cmd: "curl.exe wttr.in/auckland?format=j1"
         run_interval: 1800000 # run 30 mins
         return_format: "json"
